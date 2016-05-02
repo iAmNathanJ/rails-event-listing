@@ -1,0 +1,21 @@
+<%# TODO: Change panel class if notice is error %>
+<% if notice %>
+  <p id="notice" class="panel success"><%= notice %></p>
+<% end %>
+
+<h1>All Events</h1>
+<%= link_to 'New Event', new_event_path, class: 'button' %>
+
+<% @events.each do |event| %>
+<div class="panel admin dark">
+  <a href="<%= event_path(event[:id]) %>" class="link-default">
+    <h2><%= event.datetime.strftime("%b %-d") %></h2>
+    <h3><%= event[:city] %></h3>
+  </a>
+  <%= link_to 'View', event, class: 'button' %>
+  <%= link_to 'Edit', edit_event_path(event), class: 'button' %>
+  <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+</div>
+<% end %>
+
+<%= link_to 'New Event', new_event_path, class: 'button' %>

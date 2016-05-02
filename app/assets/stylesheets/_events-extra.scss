@@ -1,0 +1,49 @@
+// General Stuff
+.full-width {
+  width: 100%;
+}
+
+// Card Stuff
+.card {
+  max-width: 640px;
+}
+
+// Form Stuff
+label {
+  display: block;
+}
+
+fieldset {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0;
+  border: 0;
+}
+
+[type='submit'] {
+  margin-bottom: 1em;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+input, textarea {
+  &.full-width {
+    max-width: 800px;
+  }
+}
+
+textarea {
+  height: 150px;
+  padding: 1em;
+}
+
+.panel.admin {
+  width: auto;
+  margin: 1em 0;
+
+  & h2 {
+    margin-top: 0;
+  }
+}
