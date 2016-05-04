@@ -1,37 +1,31 @@
-<main>
 
-  <% if notice %>
-  <p id="notice" class="panel success"><%= notice %></p>
-  <% end %>
+<article class="card">
+  <header class="card__header">
+    <h1 class="card__date">
+      <time datetime="<%= @event.datetime %>">
+        <%= @pretty_date %><span class="text-super"><%= @date_ordinal %></span>
+      </time>
+    </h1>
+    <h2 class="card__city text-xl"><%= @event.city %>, <%= @event.state %></h2>
+    <h3 class="card__venue  text-xl"><%= @event.venue %></h3>
+  </header>
+  <figure class="badge card__poster">
+    <%# TODO: GET image.tall/wide image.src image.alt %>
+    <%= image_tag @event.image.url(:medium) %>
+    <!-- <img class="" src="<%= @event.image %>" alt=""> -->
+  </figure>
+  <p class="copy-default card__desc">
+    <%= @event.description %>
+  </p>
+  <footer class="card__footer">
+    <ul class="card__footer-links">
+      <%# TODO: GET event.links %>
+      <li><a class="button card__footer-link" href="#">Tickets</a></li>
+      <li><a class="button card__footer-link" href="#">Map</a></li>
+      <li><a class="button card__footer-link" href="#">More Info</a></li>
+    </ul>
+  </footer>
+</article>
 
-  <article class="card">
-    <header class="card__header">
-      <h1 class="card__date">
-        <time datetime="<%= @event.datetime %>">
-          <%= @pretty_date %><span class="text-super"><%= @date_ordinal %></span>
-        </time>
-      </h1>
-      <h2 class="card__city text-xl"><%= @event.city %>, <%= @event.state %></h2>
-      <h3 class="card__venue  text-xl"><%= @event.venue %></h3>
-    </header>
-    <figure class="badge card__poster">
-      <%# TODO: GET image.tall/wide image.src image.alt %>
-      <%= image_tag @event.image.url(:medium) %>
-      <!-- <img class="" src="<%= @event.image %>" alt=""> -->
-    </figure>
-    <p class="copy-default card__desc">
-      <%= @event.description %>
-    </p>
-    <footer class="card__footer">
-      <ul class="card__footer-links">
-        <%# TODO: GET event.links %>
-        <li><a class="button card__footer-link" href="#">Tickets</a></li>
-        <li><a class="button card__footer-link" href="#">Map</a></li>
-        <li><a class="button card__footer-link" href="#">More Info</a></li>
-      </ul>
-    </footer>
-  </article>
-
-  <%= link_to 'Edit', edit_event_path(@event), class: 'link-default' %> |
-  <%= link_to 'Back', events_path, class: 'link-default' %>
-</main>
+<%= link_to 'Edit', edit_event_path(@event), class: 'link-default' %> |
+<%= link_to 'Back', events_path, class: 'link-default' %>

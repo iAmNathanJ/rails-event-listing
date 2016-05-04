@@ -10,9 +10,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-<%= yield %>
+  <% if notice %>
+    <p id="notice" class="panel success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p id="alert" class="panel caution"><%= alert %></p>
+  <% end %>
+
+  <main class="main">
+    <%= yield %>
+  </main>
 
 </body>
 </html>
