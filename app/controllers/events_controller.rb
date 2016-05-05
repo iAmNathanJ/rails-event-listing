@@ -1,10 +1,12 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
   # GET /events.json
   def index
     @events = Event.all.order(:datetime)
+    @user = session['session_id']
   end
 
   # GET /events/1
@@ -71,6 +73,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.fetch(:event, {}).permit(:year, :month, :day, :hour, :minute, :datetime, :city, :state, :venue, :image, :description)
+      params.fetch(:event).permit(:year, :month, :day, :hour, :minute, :datetime, :city, :state, :venue, :image, :description)
     end
 end

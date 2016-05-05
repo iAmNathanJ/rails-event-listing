@@ -1,3 +1,24 @@
+// User Stuff
+#notice, #alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background: #efefef;
+}
+
+.user-controls {
+  width: 100%;
+  height: 57px;
+
+  &__link {
+    float: right;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
 // General Stuff
 .full-width {
   width: 100%;

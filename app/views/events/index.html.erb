@@ -1,6 +1,12 @@
 <h1>All Events</h1>
 <%= link_to 'New Event', new_event_path, class: 'button' %>
 
+<ul>
+<% session.instance_variables.each do |attribute| %>
+  <li><%= attribute %></li>
+<% end %>
+</ul>
+
 <% @events.each do |event| %>
 <div class="panel admin dark">
   <a href="<%= event_path(event[:id]) %>" class="link-default">
