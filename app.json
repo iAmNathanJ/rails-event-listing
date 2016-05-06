@@ -3,7 +3,7 @@
   "description": "Rails Event Listing System",
   "image": "heroku/ruby",
   "scripts": {
-    "postdeploy": "bundle install && rake db:setup"
+    "postdeploy": "bundle exec rake db:setup"
   },
   "repository": "https://github.com/iAmNathanJ/rails-event-listing",
   "keywords": ["ruby", "rails" ],
