@@ -10,8 +10,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'devise'
 
+# Use postgresql as the database for Active Record
+gem 'pg'
+gem 'rails_12factor'
+
 group :development, :test do
-  gem 'sqlite3'
   gem 'better_errors'
   gem 'byebug'
 end
@@ -19,12 +22,6 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-end
-
-group :production do
-  # Use postgresql as the database for Active Record
-  gem 'pg'
-  gem 'rails_12factor'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
