@@ -1,9 +1,22 @@
 {
   "name": "Rails Event Listing",
-  "description": "Rails Event Listing System",
-  "image": "heroku/ruby",
-  "scripts": "bundle install && rake db:setup && rake db:migrate",
-  "repository": "https://github.com/iAmNathanJ/rails-event-listing",
+  "description": "Rails event listing system",
   "keywords": ["ruby", "rails" ],
-  "addons": [ "heroku-postgresql" ]
+  "repository": "https://github.com/iAmNathanJ/rails-event-listing",
+  "image": "heroku/ruby",
+  "scripts": {
+    "postdeploy": "rake db:migrate"
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
 }
