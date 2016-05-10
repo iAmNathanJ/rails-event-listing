@@ -3,8 +3,8 @@
 
 if ENV["HEROKU_APP_NAME"]
   events = Event.create([
-    { title: 'Awesome Event #1' },
-    { title: 'Rad Event #2' },
-    { title: 'Meh Event #1' }
+    { city: 'Awesome Event #1' },
+    { city: 'Rad Event #2' },
+    { city: 'Meh Event #1' }
   ])
 end
