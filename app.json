@@ -5,9 +5,12 @@
   "repository": "https://github.com/iAmNathanJ/rails-event-listing",
   "image": "heroku/ruby",
   "scripts": {
-    "postdeploy": "rake db:migrate"
+    "postdeploy": "rake db:migrate && rake db:seed"
   },
   "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    }
   },
   "formation": {
   },
