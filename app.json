@@ -5,9 +5,16 @@
   "repository": "https://github.com/iAmNathanJ/rails-event-listing",
   "image": "heroku/ruby",
   "scripts": {
-    "postdeploy": "rake db:migrate"
+    "postdeploy": "rake db:migrate",
+    "pr-predestroy": "rake perf:wpt"
   },
   "env": {
+    "WPT_USER": {
+      "required": true
+    },
+    "WPT_PASSWORD": {
+      "required": true
+    }
   },
   "formation": {
   },
