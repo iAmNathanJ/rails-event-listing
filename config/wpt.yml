@@ -2,7 +2,7 @@
 k: A.6e0139459cbacdff3e1a8632986ca800
 
 # test target
-url: https://lamp-post.sparkboxqa.com
+url: https://intense-dusk-31713.herokuapp.com
 label: "<%= DateTime.now %> Lamp Post WPT"
 
 # response format
