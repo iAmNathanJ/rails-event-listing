@@ -3,14 +3,14 @@ k: A.6e0139459cbacdff3e1a8632986ca800
 
 # test target
 url: https://intense-dusk-31713.herokuapp.com
-label: "<%= DateTime.now %> Lamp Post WPT"
+label: "Lamp_Post_WPT_<%= DateTime.now %>"
 
 # response format
 f: json
 
 # http auth user/pass
-login: <%= ENV["WPT_USER"] %>
-password: <%= ENV["WPT_PASSWORD"] %>
+# login: <%= ENV["WPT_USER"] %>
+# password: <%= ENV["WPT_PASSWORD"] %>
 
 # pingback url
 pingback: http://iamnathanj.com/test-results

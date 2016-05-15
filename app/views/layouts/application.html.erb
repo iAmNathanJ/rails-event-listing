@@ -11,7 +11,6 @@
 </head>
 <body>
 
-  <h1><%= ENV["URL"] %></h1>
   <div class="user-controls">
     <% if user_signed_in? %>
       <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: 'button user-controls__link' %>
