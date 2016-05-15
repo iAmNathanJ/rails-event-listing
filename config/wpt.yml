@@ -3,7 +3,7 @@ k: A.6e0139459cbacdff3e1a8632986ca800
 
 # test target
 url: https://intense-dusk-31713.herokuapp.com
-label: "Lamp_Post_WPT_<%= DateTime.now %>"
+label: "Event_Cards_WPT_<%= DateTime.now %>"
 
 # response format
 f: json
