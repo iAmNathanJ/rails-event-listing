@@ -1,9 +1,11 @@
 # wpt api key
 k: A.6e0139459cbacdff3e1a8632986ca800
 
-# test target
-url: https://intense-dusk-31713.herokuapp.com
+# test settings
 label: "Event_Cards_WPT_<%= DateTime.now %>"
+url: https://intense-dusk-31713.herokuapp.com
+location: Dulles:Chrome.3G
+mobile: 1
 
 # response format
 f: json
